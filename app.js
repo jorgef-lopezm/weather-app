@@ -1,4 +1,5 @@
 import express from 'express';
+import path from 'path';
 
 const app = express();
 
@@ -8,6 +9,10 @@ app.get('', (request, response) => {
 
 app.get('/help', (request, response) => {
     response.send('Help page');
+});
+
+app.get('/about', (request, response) => {
+    response.send('About page');
 });
 
 app.listen(3000, () => {
